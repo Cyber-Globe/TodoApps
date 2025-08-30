@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: gray;
+  font-size: 18px;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #7327ffff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.list ul {
+  padding: 10px;
+  margin: 0;
+  background-color: #bd9affff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between; /* pushes image to the far right */
+  align-items: center;
+  list-style: none; /* remove bullet points */
+  padding: 10px;
+  border-bottom: 2px solid #ccc; /* optional: adds divider */
+  margin-bottom: 12px; /* 👈 adds visible space under each item */
+  /* optional: adds divider */
+}
+
+.item span {
+  flex: 1; /* makes text take full space */
+  margin-right: 10px;
+}
+
+.item img {
+  cursor: pointer;
+}
