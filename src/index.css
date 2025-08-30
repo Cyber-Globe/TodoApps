@@ -81,3 +81,58 @@ input::placeholder {
 .item img {
   cursor: pointer;
 }
+
+.list ul {
+  padding: 10px;
+  margin: 0;
+  background-color: #bd9aff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* take full available width */
+  max-width: 600px; /* but don’t stretch too wide */
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 12px;
+  word-wrap: break-word; /* wrap long words/text */
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.item span {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.item img {
+  cursor: pointer;
+  flex-shrink: 0; /* keeps image from shrinking */
+}
+
+/* 📱 Small screens */
+@media (max-width: 480px) {
+  .list ul {
+    padding: 8px;
+  }
+
+  .item {
+    flex-direction: column; /* stack text + image */
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item span {
+    font-size: 14px;
+    margin-right: 0;
+  }
+}
