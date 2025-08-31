@@ -9,10 +9,14 @@ export default function App() {
     setItems((items) => [...items, item]);
   }
 
+  function handleDeleteItem(id) {
+    setItems((items) => items.filter((item) => item.id != id));
+  }
+
   return (
     <div className="app">
       <Forms onAddItems={handleAddItems} />
-      <Items items={items} />
+      <Items items={items} onDeleteItem={handleDeleteItem} />
     </div>
   );
 }
